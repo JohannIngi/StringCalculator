@@ -18,4 +18,11 @@ public class StringCalculator {
     private static int toInt(String number){
         return Integer.parseInt(number);
     }
+    private static int sumOfNumbers(String number){
+    	    int sum = 0;
+        	for(String numb : number){
+        		sum += toInt(numb);
+        	}
+        	return sum;
+    }
 }
