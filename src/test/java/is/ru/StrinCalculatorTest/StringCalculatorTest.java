@@ -25,4 +25,8 @@ public class StringCalculatorTest {
 	public void NewLineNumberString() {
 		assertEquals(42, StringCalculator.add("2\n8,13\n9,10"));
 	}
+	@Test
+	public void NumberOverOnethousandString() {
+		assertEquals(3, StringCalculator.add("1010,3,2000"));
+	}
 }

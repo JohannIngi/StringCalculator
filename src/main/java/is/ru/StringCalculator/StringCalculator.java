@@ -17,7 +17,11 @@ public class StringCalculator {
     private static int sum_of_numbers(String [] arr){
         int sum = 0;
         for(String numb : arr){
-            sum += to_int(numb);
+        	if(to_int(numb) > 1000){
+        		continue;
+        	}else{
+        		sum += to_int(numb);
+        	}
         }
         return sum;
     }
