@@ -6,23 +6,21 @@ public class StringCalculator {
             return 0;
         }
         else if(numbers.contains(",")){
-        	String arr[] = numbers.split(",");
-        	int sum = 0;
-        	for(String numb : arr){
-        		sum += toInt(numb);
-        	}
-        	return sum;
+            return sumOfNumbers(splitNumbers(numbers));
         }
-        return toInt(numbers);
-    }
+        else return 1;
+	}
     private static int toInt(String number){
         return Integer.parseInt(number);
     }
-    private static int sumOfNumbers(String number){
-    	    int sum = 0;
-        	for(String numb : number){
-        		sum += toInt(numb);
-        	}
-        	return sum;
+    private static int sumOfNumbers(String [] arr){
+        int sum = 0;
+        for(String numb : arr){
+            sum += toInt(numb);
+        }
+        return sum;
+    }
+    private static String[] splitNumbers(String arr){
+        return arr.split(",");
     }
 }
