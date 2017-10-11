@@ -17,8 +17,8 @@ public class StringCalculatorTest {
 	public void TwoNumberString() {
 		assertEquals(7, StringCalculator.add("5,2"));
 	}
-		/*@Test
+	@Test
 	public void MultipleNumberString() {
-		assertEquals(23, StringCalculator.add("8, 2, 13"));
-	}*/
+		assertEquals(23, StringCalculator.add("2,8,13"));
+	}
 }
