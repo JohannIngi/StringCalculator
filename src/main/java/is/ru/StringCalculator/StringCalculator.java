@@ -8,7 +8,7 @@ public class StringCalculator {
         else if(numbers.contains(",")){
             return sumOfNumbers(splitNumbers(numbers));
         }
-        else return 1;
+        else return toInt(numbers);
 	}
     private static int toInt(String number){
         return Integer.parseInt(number);
