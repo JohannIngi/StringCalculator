@@ -9,12 +9,16 @@ public class StringCalculatorTest {
 	public void EmptyString() {
 		assertEquals(0, StringCalculator.add(""));
 	}
-		@Test
+	@Test
 	public void OneNumberString() {
-		assertEquals(2, StringCalculator.add("2"));
+	assertEquals(2, StringCalculator.add("2"));
 	}
-			@Test
+	@Test
 	public void TwoNumberString() {
-		assertEquals(3, StringCalculator.add("1, 2"));
+		assertEquals(7, StringCalculator.add("5,2"));
 	}
+		/*@Test
+	public void MultipleNumberString() {
+		assertEquals(23, StringCalculator.add("8, 2, 13"));
+	}*/
 }
