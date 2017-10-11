@@ -19,6 +19,10 @@ public class StringCalculatorTest {
 	}
 	@Test
 	public void MultipleNumberString() {
-		assertEquals(23, StringCalculator.add("2,8,13"));
+		assertEquals(42, StringCalculator.add("2,8,13,9,10"));
+	}
+	@Test
+	public void NewLineNumberString() {
+		assertEquals(42, StringCalculator.add("2\n8,13\n9,10"));
 	}
 }
