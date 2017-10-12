@@ -10,23 +10,31 @@ public class StringCalculatorTest {
 		assertEquals(0, StringCalculator.add(""));
 	}
 	@Test
-	public void OneNumberString() {
+	public void OneNumber() {
 	assertEquals(2, StringCalculator.add("2"));
+	assertEquals(109, StringCalculator.add("109"));
 	}
 	@Test
-	public void TwoNumberString() {
+	public void TwoNumber() {
 		assertEquals(7, StringCalculator.add("5,2"));
+		assertEquals(2, StringCalculator.add("1,1"));
 	}
 	@Test
-	public void MultipleNumberString() {
+	public void MultipleNumber() {
 		assertEquals(42, StringCalculator.add("2,8,13,9,10"));
+		assertEquals(14, StringCalculator.add("2,4,8"));
 	}
 	@Test
-	public void NewLineNumberString() {
-		assertEquals(42, StringCalculator.add("2\n8,13\n9,10"));
+	public void NewLineBetweenNumbers() {
+		assertEquals(42, StringCalculator.add("2\r\n8,13\r\n9,10"));
+		assertEquals(15, StringCalculator.add("1,2\r\n9,3"));
 	}
 	@Test
-	public void NumberOverOnethousandString() {
+	public void NumberOverOnethousand() {
 		assertEquals(3, StringCalculator.add("1010,3,2000"));
 	}
+	@Test
+	public void NewDelimeter() {
+		assertEquals(42, StringCalculator.add("//;\r\n2\r\n8,13\r\n9,10"));
+	}	
 }
