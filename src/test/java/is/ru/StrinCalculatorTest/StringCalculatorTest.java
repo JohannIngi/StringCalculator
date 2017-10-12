@@ -35,13 +35,16 @@ public class StringCalculatorTest {
 	@Test
 	public void NewDelimeter() {
 		assertEquals(6, StringCalculator.add("//;1;2;3"));
+		assertEquals(6, StringCalculator.add("//:1:2:3"));
+		assertEquals(6, StringCalculator.add("///1/2/3"));
 	}
 	@Test
 	public void NegativesNumbers(){
 		try{
-		calculator.add("2,-4,3,-5");
+		StringCalculator.add("2,-4,3,-5");
 		}
 		catch (RuntimeException ex){
 		assertEquals("Error no negative numbers allowed: -4,-5", ex.getMessage());
 		}
+	}
 }
