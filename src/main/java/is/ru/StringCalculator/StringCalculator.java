@@ -1,18 +1,18 @@
 package is.ru.StringCalculator;
 
 public class StringCalculator {
+
     public static int add(String numbers) {
 
-        String tmp_numbers = numbers.replaceAll("\\r\\n|\\r|\\n", ",");
-        numbers = tmp_numbers;
-
-        check_delimiter(numbers);
-
+        numbers = check_delimiter(numbers);
 
         if(numbers.equals("")){
             return 0;
         }
-        else if(numbers.contains(",") || numbers.contains("\r\n")){
+
+        String tmp_numbers = numbers.replaceAll("\\r\\n|\\r|\\n", ",");
+        numbers = tmp_numbers;
+        if(numbers.contains(",") || numbers.contains("\r\n")){
             return sum_of_numbers(split_numbers(numbers));
         } else
             return to_int(numbers);

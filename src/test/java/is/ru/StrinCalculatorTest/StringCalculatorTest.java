@@ -26,8 +26,7 @@ public class StringCalculatorTest {
 	}
 	@Test
 	public void NewLineBetweenNumbers() {
-		assertEquals(42, StringCalculator.add("2\r\n8,13\r\n9,10"));
-		assertEquals(15, StringCalculator.add("1,2\r\n9,3"));
+		assertEquals(6, StringCalculator.add("1\n2,3"));
 	}
 	@Test
 	public void NumberOverOnethousand() {
@@ -35,6 +34,6 @@ public class StringCalculatorTest {
 	}
 	@Test
 	public void NewDelimeter() {
-		assertEquals(42, StringCalculator.add("//;\r\n2\r\n8,13\r\n9,10"));
-	}	
+		assertEquals(6, StringCalculator.add("//;1;2;3"));
+	}
 }
