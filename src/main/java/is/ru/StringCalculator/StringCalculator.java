@@ -42,15 +42,7 @@ public class StringCalculator {
                 sum += to_int(number);
             }
         }
-        if(contains_negative){
-	       	StringBuilder sb = new StringBuilder("Error no negative numbers allowed: ");
-	        for(String number : negative_number){
-	            sb.append(number);
-	            sb.append(",");
-	        }
-	        sb.setLength(sb.length() - 1);
-	        throw new RuntimeException(sb.toString());
-        }
+        if(contains_negative){run_error_msg(negative_number);}
         return sum;
     }
     private static String[] split_numbers(String numbers){
@@ -67,6 +59,12 @@ public class StringCalculator {
         return numbers;
     }
     private static  void run_error_msg(ArrayList<String> numbers){
-
+        StringBuilder sb = new StringBuilder("Error no negative numbers allowed: ");
+        for(String number : numbers){
+            sb.append(number);
+            sb.append(",");
+        }
+        sb.setLength(sb.length() - 1);
+        throw new RuntimeException(sb.toString());
     }
 }
