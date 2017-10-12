@@ -1,5 +1,11 @@
 package is.ru.StringCalculator;
 
+import java.util.ArrayList;
+
+/**
+ * Created by Johann on 10.10.2017.
+ */
+
 public class StringCalculator {
 
     public static int add(String numbers) {
@@ -21,13 +27,29 @@ public class StringCalculator {
         return Integer.parseInt(number);
     }
     private static int sum_of_numbers(String [] arr){
+        boolean contains_negative = false;
+        ArrayList<String> negative_number = new ArrayList<String>();
         int sum = 0;
-        for(String numb : arr){
-            if(to_int(numb) > 1000){
+        for(String number : arr){
+            if(to_int(number) < 0){
+                negative_number.add(number);
+                contains_negative = true;
+            }
+
+            if(to_int(number) > 1000){
                 continue;
             }else{
-                sum += to_int(numb);
+                sum += to_int(number);
             }
+        }
+        if(contains_negative){
+	       	StringBuilder sb = new StringBuilder("Error no negative numbers allowed: ");
+	        for(String number : negative_number){
+	            sb.append(number);
+	            sb.append(",");
+	        }
+	        sb.setLength(sb.length() - 1);
+	        throw new RuntimeException(sb.toString());
         }
         return sum;
     }
@@ -43,5 +65,8 @@ public class StringCalculator {
             return number;
         }
         return numbers;
+    }
+    private static  void run_error_msg(ArrayList<String> numbers){
+
     }
 }

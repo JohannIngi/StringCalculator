@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.StringCalculator.StringCalculatorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-10-12T12:40:14" hostname="johanns-laptop" time="0.008">
+<testsuite name="is.ru.StringCalculator.StringCalculatorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-10-12T13:47:46" hostname="johanns-laptop" time="0.012">
   <properties/>
-  <testcase name="EmptyString" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.005"/>
-  <testcase name="NegativesNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
+  <testcase name="EmptyString" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.006"/>
+  <testcase name="NegativesNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.001"/>
   <testcase name="OneNumber" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
   <testcase name="NumberOverOnethousand" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
   <testcase name="MultipleNumber" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
-  <testcase name="NewDelimeter" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.001"/>
-  <testcase name="NewLineBetweenNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
+  <testcase name="NewDelimeter" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
+  <testcase name="NewLineBetweenNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.004"/>
   <testcase name="TwoNumber" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
